@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Project tracking intro component</title>
+    <link rel="stylesheet" href="output.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      h1 {
+        font-weight: 900;
+        font-family: "barlow condensed";
+      }
+
+      #image-container {
+        position: relative;
+        z-index: 1;
+      }
+
+      #details {
+        position: absolute;
+        z-index: 4;
+        background: white;
+        height: 190px;
+        width: 80%;
+        font-weight: bolder;
+        top: 15px;
+        text-align: center;
+        margin-top: 70px;
+        padding-top: 10px;
+        box-shadow: 2px 2px 2px 1px gray;
+        border-radius: 2px;
+      }
+
+      #details button {
+        border-top: 1px solid rgb(220, 216, 216);
+        padding-top: 10px;
+        width: 220px;
+        margin-top: 20px;
+      }
+
+      section {
+        flex-direction: row-reverse;
+        margin-top: 60px;
+      }
+
+      li:hover {
+        border-bottom: 1px solid black;
+      }
+      header button:hover {
+        border-bottom: 1px solid black;
+      }
+
+      
+    </style>
+  </head>
+  <body class="font-barlow">
+    <header class="flex justify-between lg:flex lg:mx-16 mt-10 mx-4">
+      <div class="">
+        <img src="images/logo.svg" alt="" />
+      </div>
+      <!-- details open hamburger -->
+      <div id="details" class="bg-white justify-center hidden">
+        <ul>
+          <a class="font-barlowCondensed" href=""><li>Product</li></a>
+          <a class="font-barlowCondensed ms-0.5" href=""><li>Features</li></a>
+          <a class="font-barlowCondensed ms-0.5" href=""><li>Pricing</li></a>
+        </ul>
+        <button class="text-gray-400">Login</button>
+      </div>
+      <div class="lg:hidden">
+        <div onclick="hamburgerrr()">
+          <img
+            id="hamburger"
+            class="mt-2"
+            src="images/icon-hamburger.svg"
+            alt=""
+          />
+        </div>
+
+        <img
+          id="cancel"
+          onclick="cancelll()"
+          class="hidden"
+          src="images/icon-close.svg"
+          alt=""
+        />
+      </div>
+      <div id="navright" class="hidden lg:flex">
+        <ul id="navul" class="flex me-5 font-bold">
+          <a class="text-xl font-barlowCondensed" href=""><li>PRODUCT</li></a>
+          <a class="ms-10 text-xl font-bold font-barlowCondensed" href=""
+            ><li>FEATURES</li></a
+          >
+          <a class="ms-10 text-xl font-barlowCondensed" href=""
+            ><li>PRICING</li></a
+          >
+        </ul>
+        <button class="mx-5 text-lg">Login</button>
+      </div>
+    </header>
+    <section class="lg:flex lg:mx-10">
+      <div id="image-container" class="mt-14">
+        <img id="imgillus" src="images/illustration-devices.svg" alt="" />
+      </div>
+      <div>
+        <div class="flex justify-center mt-8 lg:pt-16">
+          <button
+            class="bg-VeryDarkBlue text-white font-barlow w-10 rounded-xl"
+          >
+            New
+          </button>
+          <h4 class="ms-2 text-gray-500">MONOGRAPH DASHBORD</h4>
+        </div>
+        <div class="mt-4 md:text-center">
+          <h1 class="text-4xl mx-4">POWERFUL INSIGHTS INTO YOUR TEAM</h1>
+          <h2 class="mx-4 my-4 text-sm w-8/12 md:ms-36">
+            Project planning and time tracking for agile teams
+          </h2>
+        </div>
+        <div class="flex justify-center mt-8">
+          <button
+            class="bg-reddd rounded-lg text-white h-8 text-xs w-5/12 lg:w-36"
+          >
+            SCHEDULE A DEMO
+          </button>
+          <p class="text-sm text-gray-400 ms-3 mt-2">TO SEE A LIVE PREVIEW</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-10 lg:mt-20">
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Inaolaji A. Ridwan</a>.
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
